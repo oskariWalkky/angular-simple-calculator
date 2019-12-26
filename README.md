@@ -1,5 +1,7 @@
 # SimpleCalculator
 
+The goal of this project is to practice unit testing by building a calculator and its components.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
 ## Development server
