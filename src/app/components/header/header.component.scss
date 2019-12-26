@@ -1,5 +1,9 @@
 div {
   height: 50px;
   width: 100%;
-  background-color: red;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
 }
