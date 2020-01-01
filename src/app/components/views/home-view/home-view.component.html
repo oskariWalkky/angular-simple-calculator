@@ -1,39 +1,47 @@
-<app-display-output [currentCalculation]="currentCalculation"></app-display-output>
+<app-display-output [currentCalculation]="currentCalculation"
+  [outPut]="outputToDisplay"></app-display-output>
 
 <div class="keyboard-layout">
   <div class="number-layout">
-    <app-button [symbol]="'1'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'2'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'3'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'4'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'5'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'6'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'7'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'8'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'9'"
-      (outputVale)="concatOperation($event)"></app-button>
-    <app-button [symbol]="'0'"
-      (outputVale)="concatOperation($event)"></app-button>
+    <app-button [symbol]="1"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="2"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="3"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="4"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="5"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="6"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="7"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="8"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="9"
+      (outputVale)="appendToList($event)"></app-button>
+    <app-button [symbol]="0"
+      (outputVale)="appendToList($event)"></app-button>
   </div>
 
   <div class="operations-layout">
     <app-button [symbol]="'+'"
-      (outputVale)="concatOperation($event)"></app-button>
+      (outputVale)="appendToList($event)"></app-button>
     <app-button [symbol]="'-'"
-      (outputVale)="concatOperation($event)"></app-button>
+      (outputVale)="appendToList($event)"></app-button>
     <app-button [symbol]="'*'"
-      (outputVale)="concatOperation($event)"></app-button>
+      (outputVale)="appendToList($event)"></app-button>
     <app-button [symbol]="'/'"
-      (outputVale)="concatOperation($event)"></app-button>
+      (outputVale)="appendToList($event)"></app-button>
     <app-button [symbol]="'='"
-      (outputVale)="concatOperation($event)"></app-button>
+      (click)="calculate()"></app-button>
+  </div>
+
+  <div class="reset-operations">
+    <app-button [symbol]="'C'"
+      (click)="clearOutput()"></app-button>
+    <app-button [symbol]="'<--'"
+      (click)="removeOne()"></app-button>
   </div>
 </div>
